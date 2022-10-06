@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_activity_nav"
+    app:startDestination="@id/homaPageFragment">
+
+    <fragment
+        android:id="@+id/homaPageFragment"
+        android:name="com.tuncaksoy.invioodevdort.HomaPageFragment"
+        android:label="fragment_homa_page"
+        tools:layout="@layout/fragment_homa_page" >
+        <action
+            android:id="@+id/action_homaPageFragment_to_APageFragment2"
+            app:destination="@id/APageFragment" />
+        <action
+            android:id="@+id/action_homaPageFragment_to_XPageFragment"
+            app:destination="@id/XPageFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/APageFragment"
+        android:name="com.tuncaksoy.invioodevdort.APageFragment"
+        android:label="fragment_a_page"
+        tools:layout="@layout/fragment_a_page" >
+        <action
+            android:id="@+id/action_APageFragment_to_BPageFragment"
+            app:destination="@id/BPageFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/BPageFragment"
+        android:name="com.tuncaksoy.invioodevdort.BPageFragment"
+        android:label="fragment_b_page"
+        tools:layout="@layout/fragment_b_page" >
+        <action
+            android:id="@+id/action_BPageFragment_to_YPageFragment"
+            app:destination="@id/YPageFragment"
+            app:popUpTo="@id/APageFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/XPageFragment"
+        android:name="com.tuncaksoy.invioodevdort.XPageFragment"
+        android:label="fragment_x_page"
+        tools:layout="@layout/fragment_x_page" >
+        <action
+            android:id="@+id/action_XPageFragment_to_YPageFragment"
+            app:destination="@id/YPageFragment"
+            app:popUpTo="@id/XPageFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/YPageFragment"
+        android:name="com.tuncaksoy.invioodevdort.YPageFragment"
+        android:label="fragment_y_page"
+        tools:layout="@layout/fragment_y_page" />
+</navigation>
